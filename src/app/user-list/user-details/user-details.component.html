@@ -1,7 +1,10 @@
-<div class="user-details">
-    <h2>Détails de l'utilisateur</h2>
-    <p><strong>Nom:</strong> {{ user.name }}</p>
-    <p><strong>Email:</strong> {{ user.email }}</p>
-    <p><strong>Occupation:</strong> {{ user.occupation }}</p>
+<div class="form-container">
+    <div class="form-content mat-elevation-z4">
+      <h1>Détails de l'utilisateur</h1>
+      <p><strong>Nom:</strong> {{ user.name }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Occupation:</strong> {{ user.occupation }}</p>
+      <button mat-button class="custom-lightblue-button" [routerLink]="['/users']">Retour aux utilisateurs</button>
+    </div>
   </div>
   

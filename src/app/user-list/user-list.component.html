@@ -1,30 +1,53 @@
-<!-- user-list.component.html -->
+<style>
+  .custom-lightblue-button {
+    background-color: lightblue !important; 
+    color: black !important; 
+  }
 
-<button mat-flat-button color="primary" [routerLink]="['/add']">Ajouter un utilisateur</button>
+  .custom-darkblue-header {
+    background-color: darkblue !important; 
+    color: white !important; 
+  }
+  
+  .title{
+    display: flex;
+    justify-content: center;
+    font-size:xx-large;
+  }
+
+</style>
+
+<div class="title">User</div>
+
+<div class="button-add">
+  <button mat-flat-button class="custom-lightblue-button" [routerLink]="['/add']">Ajouter un utilisateur</button>
+</div>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
   <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>Nom</th>
+    <th mat-header-cell *matHeaderCellDef class="custom-darkblue-header">Nom</th>
     <td mat-cell *matCellDef="let user">{{ user.name }}</td>
   </ng-container>
 
   <ng-container matColumnDef="email">
-    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <th mat-header-cell *matHeaderCellDef class="custom-darkblue-header">Email</th>
     <td mat-cell *matCellDef="let user">{{ user.email }}</td>
   </ng-container>
 
   <ng-container matColumnDef="occupation">
-    <th mat-header-cell *matHeaderCellDef>Occupation</th>
+    <th mat-header-cell *matHeaderCellDef class="custom-darkblue-header">Occupation</th>
     <td mat-cell *matCellDef="let user">{{ user.occupation }}</td>
   </ng-container>
 
   <ng-container matColumnDef="actions">
-    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <th mat-header-cell *matHeaderCellDef class="custom-darkblue-header">Actions</th>
     <td mat-cell *matCellDef="let user">
-      <button mat-flat-button color="warn" [routerLink]="['/user', user.id]">Détails</button>
-      <button mat-flat-button color="accent" [routerLink]="['/update', user.id]">Mettre à jour</button>
-      <button mat-flat-button color="warn" (click)="deleteUser(user)">Supprimer</button>
+      <div class="button">
+        <button mat-flat-button class="custom-lightblue-button" [routerLink]="['/user', user.id]">Détails</button>
+        <button mat-flat-button class="custom-lightblue-button" [routerLink]="['/update', user.id]">Mettre à jour</button>
+        <button mat-flat-button color="warn" (click)="deleteUser(user)">Supprimer</button>
+      </div>
     </td>
   </ng-container>
 

@@ -1,0 +1,10 @@
+.button-add{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+}

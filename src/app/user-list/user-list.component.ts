@@ -39,6 +39,13 @@ export class UserListComponent implements OnInit {
       occupation: user.occupation
     });
   }
+  showUpdateUserForm(user: User) {
+    this.router.navigate(['/update-user', user.id]);
+  }
+
+  showAddUserForm() {
+    this.router.navigate(['/add-user']);
+  }
 
   updateUser(user: User) {
     const updatedUser: User = {

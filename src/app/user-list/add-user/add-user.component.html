@@ -1,19 +1,21 @@
-<div class="add-user-form">
-    <h2>Ajouter un utilisateur</h2>
-    <form (ngSubmit)="addUser()">
-      <div class="form-group">
-        <label for="name">Nom:</label>
-        <input type="text" id="name" [(ngModel)]="user.name" name="name" />
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="text" id="email" [(ngModel)]="user.email" name="email" />
-      </div>
-      <div class="form-group">
-        <label for="occupation">Occupation</label>
-        <input type="text" id="occupation" [(ngModel)]="user.occupation" name="occupation" />
-      </div>
-      <button type="submit" class="btn btn-primary">Ajouter</button>
-    </form>
+<div class="form-container">
+    <div class="form-content mat-elevation-z4">
+      <h1>Ajouter un utilisateur</h1>
+      <form (ngSubmit)="addUser()">
+        <div class="form-group">
+          <label for="name">Nom:</label>
+          <input type="text" id="name" [(ngModel)]="user.name" name="name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" [(ngModel)]="user.email" name="email" />
+        </div>
+        <div class="form-group">
+          <label for="occupation">Occupation</label>
+          <input type="text" id="occupation" [(ngModel)]="user.occupation" name="occupation" />
+        </div>
+        <button type="submit" mat-raised-button color="primary">Ajouter</button>
+      </form>
+    </div>
   </div>
   

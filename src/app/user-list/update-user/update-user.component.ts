@@ -61,8 +61,7 @@ export class UpdateUserComponent implements OnInit {
       };
 
       this.userService.updateUser(updatedUser).subscribe(() => {
-        // Redirigez l'utilisateur vers la liste des utilisateurs après la mise à jour
-        this.router.navigate(['/users']); // Utilisez le chemin '/users' qui correspond à UserListComponent
+        this.router.navigate(['/users']); 
       });
     }
   }
